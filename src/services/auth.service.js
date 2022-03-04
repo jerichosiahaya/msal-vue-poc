@@ -8,15 +8,21 @@ export default class AuthService {
     //   redirectUri = PROD_REDIRECT_URI;
     // }
     this.applicationConfig = {
-      // 9d86c8dc-bf7d-4573-bc3c-4df2f2c32b93
-      clientID: '01d31b5c-f7c8-4c93-b2c6-089ac44ce603',
-      tenantID: 'bf37f315-bac2-44a8-ae6c-2f21351d264c',
-      authority: 'https://login.microsoftonline.com/bf37f315-bac2-44a8-ae6c-2f21351d264c',
+      // 9d86c8dc-bf7d-4573-bc3c-4df2f2c32b93 multitenant-test
+      // kompas
+      clientID: '9b3bc340-de93-4cb0-b9ac-02556005d3cf',
+      tenantID: 'd9c709b5-56b4-4388-9d0e-36c4e84dd197',
+      authority: 'https://login.microsoftonline.com/d9c709b5-56b4-4388-9d0e-36c4e84dd197',
+      // umn
+      // clientID: '01d31b5c-f7c8-4c93-b2c6-089ac44ce603',
+      // tenantID: 'bf37f315-bac2-44a8-ae6c-2f21351d264c',
+      // authority: 'https://login.microsoftonline.com/bf37f315-bac2-44a8-ae6c-2f21351d264c',
       graphScopes: ['user.read']
     };
     this.app = new Msal.UserAgentApplication(
       this.applicationConfig.clientID,
       this.applicationConfig.authority,
+      
     );
   };
 
